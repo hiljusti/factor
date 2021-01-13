@@ -30,7 +30,7 @@ IN: prettyprint
 : pprint-short ( obj -- )
     [ pprint ] with-short-limits ;
 
-: pprint-shortish ( obj -- )
+: pprint-short-if-unset ( obj -- )
     [ pprint ] defaulting-with-short-limits ;
 
 : unparse-short ( obj -- str )
@@ -38,7 +38,7 @@ IN: prettyprint
 
 : short. ( obj -- ) pprint-short nl ;
 
-: shortish. ( obj -- ) pprint-shortish nl ;
+: short-if-unset. ( obj -- ) pprint-short-if-unset nl ;
 
 : error-in-pprint ( obj -- str )
     class-of name>> "~pprint error: " "~" surround ;

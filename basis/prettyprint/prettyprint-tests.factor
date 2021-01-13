@@ -386,9 +386,9 @@ TUPLE: final-tuple ; final
 
 { "{ ~array~ }\n" } [ [ { { 1 2 } } short. ] with-string-writer ] unit-test
 
-{ "H{ { 1 ~array~ } }\n" } [ [ H{ { 1 { 2 } } } shortish. ] with-string-writer ] unit-test
+{ "H{ { 1 ~array~ } }\n" } [ [ H{ { 1 { 2 } } } short-if-unset. ] with-string-writer ] unit-test
 
-{ "{ ~array~ }\n" } [ [ { { 1 2 } } shortish. ] with-string-writer ] unit-test
+{ "{ ~array~ }\n" } [ [ { { 1 2 } } short-if-unset. ] with-string-writer ] unit-test
 
 { "H{ { 1 { 2 } } }\n" } [ [ [ H{ { 1 { 2 } } } shortish. ] without-limits ] with-string-writer ] unit-test
 
