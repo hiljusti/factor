@@ -49,7 +49,7 @@ IN: prettyprint
 
 : stack. ( seq -- )
     [
-        [ shortish. ] [
+        [ short-if-unset. ] [
             drop [ error-in-pprint ] keep write-object nl
         ] recover
     ] each ;

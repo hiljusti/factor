@@ -390,9 +390,9 @@ TUPLE: final-tuple ; final
 
 { "{ ~array~ }\n" } [ [ { { 1 2 } } short-if-unset. ] with-string-writer ] unit-test
 
-{ "H{ { 1 { 2 } } }\n" } [ [ [ H{ { 1 { 2 } } } shortish. ] without-limits ] with-string-writer ] unit-test
+{ "H{ { 1 { 2 } } }\n" } [ [ [ H{ { 1 { 2 } } } short-if-unset. ] without-limits ] with-string-writer ] unit-test
 
-{ "{ { 1 2 } }\n" } [ [ [ { { 1 2 } } shortish. ] without-limits ] with-string-writer ] unit-test
+{ "{ { 1 2 } }\n" } [ [ [ { { 1 2 } } short-if-unset. ] without-limits ] with-string-writer ] unit-test
 
 { "H{ { 1 { 2 3 } } }\n" } [
     f nesting-limit [
